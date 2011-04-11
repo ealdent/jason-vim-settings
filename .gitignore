@@ -1,0 +1,10 @@
+!*
+.netrwhist
+.DS_Store
+*.swp
+sessions
+bundle/gundo/*
+bundle/ragtag/*
+bundle/snipmate/*
+bundle/surround/*
+bundle/unimpaired/*
