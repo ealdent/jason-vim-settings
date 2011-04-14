@@ -1,5 +1,6 @@
-" John's Personal VIM settings
-" Maintainer: John Weathers <jweathers@gmail.com>
+" Jason's Personal VIM settings
+" Maintainer: Jason Adams <jasonmadams@gmail.com>
+" Forked: John Weathers <jweathers@gmail.com>
 
 " Activate pathogen
 call pathogen#runtime_append_all_bundles()
@@ -25,8 +26,8 @@ set linebreak
 set showbreak=\ ↵\ \  
 
 " tab stop and shift width settings
-set tabstop=3
-set shiftwidth=3
+set tabstop=2
+set shiftwidth=2
 set smarttab
 
 " Fine-tune the C/C++/Java indentation options
@@ -61,6 +62,7 @@ set browsedir=current
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+nnoremap ; :
 let mapleader = ","
 
 " Use ack instead of grep
@@ -100,8 +102,15 @@ map <leader>a :Ack ""<Left>
 
 " NERD Tree
 map <leader>d :NERDTreeToggle<cr>
+map <leader>df :NERDTreeFind<cr>
 let NERDTreeIgnore=['\~$','^target$','\.hi','\.o']
 let NERDTreeDirArrows=1
+
+" CoffeeScript
+map :cc :CoffeeCompile
+
+" Get rid of highlighting
+map <leader><space> :noh<CR>
 
 " Map shortcut for ZoomWin
 map <leader>z :ZoomWin<CR>
@@ -137,7 +146,7 @@ if $TERM == 'screen'
 endif
 
 if &t_Co >= 256
-   colors idlefingers256
+   colors desert256
 else
    colors default
 endif
