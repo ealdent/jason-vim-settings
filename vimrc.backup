@@ -109,6 +109,12 @@ let NERDTreeDirArrows=1
 " CoffeeScript
 map :cc :CoffeeCompile
 
+" NERDCommenter
+let g:NERDCustomDelimiters = {
+  \ 'coffee': { 'left': '# ' },
+  \ 'ruby': { 'left': '# ' }
+  \ }
+
 " Get rid of highlighting
 map <leader><space> :noh<CR>
 
